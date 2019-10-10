@@ -9,7 +9,7 @@ var cardsRouter = require('./routes/cards');
 var transactionRouter = require('./routes/transaction');
 
 var app = express();
-
+global.cards = [];
 const principal = '/api/v1/';
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

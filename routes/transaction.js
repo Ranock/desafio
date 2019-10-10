@@ -21,7 +21,7 @@ router.post('/', function(req, res, next) {
 
 router.post('/:transaction_id', function(req, res, next) {
     var transaction = req.params.transaction_id;
-    var trans = null;
+    var trans = null; 
     bdtrans.forEach(x =>{
         if (x.index == transaction)
             trans = x.trans;
@@ -33,7 +33,7 @@ router.post('/:transaction_id', function(req, res, next) {
             capture: {
                 api_key: trans.api_key,
                 capture: true,
-                ammount: trans.ammount
+                ammount: trans.amm
             }
         });
     }
