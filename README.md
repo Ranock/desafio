@@ -1,3 +1,3 @@
-Hugo de Oliveira Rabock
-Diego lima de Aquino
-Victor Hugo Oliveira Leão
+Hugo de Oliveira Rabock -----
+Diego lima de Aquino ------ 
+Victor Hugo Oliveira Leão ---- 
