@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
     })
     global.cards.push(card);
   res.json({
-      token: global.cards
+      token: card.hash
     });
 });
 

@@ -13,7 +13,6 @@ router.post('/', function(req, res, next) {
         trans : body
     }
     bdtrans.push(trans);
-  
   res.json({
       message: "/api/v1/transaction/"+id,
     });
@@ -26,16 +25,17 @@ router.post('/:transaction_id', function(req, res, next) {
         if (x.index == transaction)
             trans = x.trans;
         });
-    
     if (trans != null){ 
         
         res.json({
             capture: {
                 api_key: trans.api_key,
                 capture: true,
-                ammount: trans.amm
+                ammount: trans.ammount
             }
         });
+    }else{
+        res.status(404).send();
     }
   });
   
