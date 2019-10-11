@@ -25,15 +25,12 @@ router.post('/:transaction_id', function(req, res, next) {
         if (x.index == transaction)
             trans = x.trans;
         });
-    if (trans != null){ 
-        
+    if (trans != null){
         res.json({
-            capture: {
                 api_key: trans.api_key,
                 capture: true,
                 ammount: trans.ammount
-            }
-        });
+         });
     }else{
         res.status(404).send();
     }

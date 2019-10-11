@@ -5,8 +5,7 @@ var md5 = require('md5');
 
 /* GET users listing. */
 router.post('/', function(req, res, next) {
-    card_aux = req.body;
-    
+    card_aux = req.body;    
     const token = md5(card_aux.name + card_aux.number + card_aux.api_key);
     card ={
         name: card_aux.name,
